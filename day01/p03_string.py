@@ -90,7 +90,7 @@ a = 'Life is short, You need Python'
 #갯수 세기
 print(a.count('Life')) #1
 print(a.count('o')) #3
-#위치 찾기
+#위치 찾기 
 print(a.find('sh')) #8
 print(a.index('t')) #첫번째 t의 위치
 print(a.count('k')) #index()는 count()로 갯수가 0이 아닐때만 호출
