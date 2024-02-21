@@ -84,7 +84,7 @@ bb.remove(3)
 print(even.pop())
 print(even.pop()) #스택의 기능 pop()
 print(even)
-
+ 
 ## 튜플
 #리스트와 동일, 단, 삭제, 편집 불가
 tVal = (1,3,5,7,9)
