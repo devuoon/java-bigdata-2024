@@ -12,3 +12,23 @@ elif money < 5000 and money >= 2500:
 else:
   print('걸어가~')
   print('돈도 없는게...')
+
+a, b, c, d = 10, 5, 7, 9
+
+print(a >= b) #True
+print(c > d)  #False
+
+print(a >= b and c > d) #False
+print(a >= b or c > d) #True
+
+print(not (a >= b)) #False
+
+## print() end옵션(많이 사용), sep옵션
+print(1 in [1,3,5,7,9], end =',') #True
+print(6 in [1,3,5,7,9]) #False
+
+print('13579', '246810', sep = '|')
+
+score = 60
+
+print('success' if score >= 60 else 'falure')

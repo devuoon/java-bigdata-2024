@@ -38,7 +38,7 @@
     - 딕셔너리, 집합
     - 불형
     - None형
-    - 제어문 (if, while, for)
+    - 제어문 (if, for, while)
 
 ## 3일차
 
