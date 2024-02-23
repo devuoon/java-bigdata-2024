@@ -8,9 +8,11 @@
 
 # 언어체계 추가 ASCII(한글 cp949), 유니코드(utf-8) 
 # 상대경로, 절대경로
-f = open('./day03/sample.txt', mode='w', encoding='utf-8')
+# w는 매번 새로 파일 생성, a는 기존파일에 내용추가
+# 로그 등을 남길땐 a로 작업해야 함
+f = open('./day03/sample.txt', mode='a', encoding='utf-8')
 # 파일쓰기 진행
-f.write('안녕하세요. 파이썬.')
-f.write('모두 화이팅!!')
+f.write('안녕하세요. 파이썬.\n') # 한줄내리기는 \n 붙일것
+f.write('모두 화이팅!!\n')
 
 f.close() # 파이썬에서만 옵션, 다른언어에서는 무조건 close()
