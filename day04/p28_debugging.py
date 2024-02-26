@@ -2,39 +2,61 @@
 # desc : 디버깅 학습, 예외처리 추가
 
 class newCalc():
-  def add(a, b):
+  def add(self, a, b):
     res = a + b
     return res
   
-  def min(a, b):
+  def min(self,a, b):
     res = a - b
     return res
   
-  def mul(a, b):
+  def mul(self,a, b):
     res = a * b
     return res
   
-  def div(a, b):
-    res = a / b
+  def div(self,a, b):
+    try:
+      res = a / b
+    except:
+      print('제수에 0을 넣으면 안됩니다')
+      res = 0
     return res
   
 while True:
-  select = int(input('메뉴 1. 더하기, 2. 빼기, 3. 곱하기, 4. 나누기, 5. 종료 > '))
-
+  try:
+    select = int(input('메뉴 1. 더하기, 2. 빼기, 3. 곱하기, 4. 나누기, 5. 종료 > '))
+  except:
+    print('1~5까지의 숫자를 입력해주세요')
+    input()
+    continue
+  
   if select == 1:
-    x, y = map(int, input('두 수 입력(정수) > '))
-    calc = newCalc()
-    print(f'더하기 결과 : {x} + {y} = {calc.add(x, y)}')
+    try:
+      x, y = map(int, input('두 수 입력(정수) > ').split())
+      calc = newCalc()
+      print(f'더하기 결과 : {x} + {y} = {calc.add(x, y)}')
+    except:
+      print('정수만 입력하세요.')
+      input()
+      continue
+    
   elif select == 2:
-    x, y = map(int, input('두 수 입력(정수) > '))
+    x, y = map(int, input('두 수 입력(정수) > ').split())
     calc = newCalc()
     print(f'빼기 결과 : {x} - {y} = {calc.min(x, y)}')
+
   elif select == 3:
-    x, y = map(int, input('두 수 입력(정수) > '))
+    x, y = map(int, input('두 수 입력(정수) > ').split())
     calc = newCalc()
     print(f'곱하기 결과 : {x} * {y} = {calc.mul(x, y)}')
+
   elif select == 4:
-    x, y = map(int, input('두 수 입력(정수) > '))
+    x, y = map(int, input('두 수 입력(정수) > ').split())
+    # if y == 0:
+    #   print('제수에 0을 입력하지 마세요.')
+    #   input()
+    #   continue
+
     calc = newCalc()
     print(f'나누기 결과 : {x} / {y} = {calc.div(x, y)}')
   elif select == 5:
