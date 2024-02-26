@@ -8,5 +8,10 @@
 
 from faker import Faker
 
-dummy = Faker('ko-KR') #한국어
-print(dummy.items().pop())
+fake = Faker('ko-KR') #한국어
+print(fake.name())
+print(fake.address())
+print(fake.profile())
+
+dummyData = [(fake.profile()) for _ in range(10)]
+print(dummyData)
