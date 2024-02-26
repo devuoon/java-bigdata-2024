@@ -39,7 +39,7 @@ while True:
       print('정수만 입력하세요.')
       input()
       continue
-    
+       
   elif select == 2:
     x, y = map(int, input('두 수 입력(정수) > ').split())
     calc = newCalc()
