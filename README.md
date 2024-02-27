@@ -69,4 +69,39 @@
     - 아스키 및 유니코드
     - 주소록 앱 만들기
 
+    ```python
+      class Contact: # 주소록 클래스
+      # 생성자
+      __name = ''
+      __phoneNumber = ''
+      __eMail = ''
+      __addr = ''
+
+      def __init__(self, name, phoneNumber, eMail, addr) -> None:
+        self.__name = name
+        self.__phoneNumber = phoneNumber
+        self.__eMail = eMail
+        self.__addr = addr
+
+      # 사용자가 원하는 형태로 출력
+      def __str__(self) -> str:
+        res = (f'이  름 : {self.__name}\n'
+                f'핸드폰 : {self.__phoneNumber}\n'
+                f'이메일 : {self.__eMail}\n'
+                f'주  소 : {self.__addr}\n')
+        return res
+
+      # 연락처 여부 확인
+      def isNameExist(self, name):
+        if self.__name == name: # 찾는 이름 존재
+          return True
+        else:
+          return False
+
+      def getInfo(self):
+        return self.__name, self.__phoneNumber, self.__eMail, self.__addr
+    ```
+
     ![주소록앱](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata01.gif)
+
+    -
