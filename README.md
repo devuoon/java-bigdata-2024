@@ -105,3 +105,5 @@
     ![주소록앱](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata01.gif)
 
     - Windows Application(PyQt)
+
+    ![QtApp](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata02.png)
