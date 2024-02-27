@@ -31,6 +31,10 @@ class Contact: # 주소록 클래스
     else:
       return False
   
+  def getInfo(self):
+    return self.__name, self.__phoneNumber, self.__eMail, self.__addr
+  
+  
 def setContact(): #사용자 입력으로 주소록 받기함수
   (name, phoneNumber, eMail, addr) = input('주소록 입력(이름, 핸드폰, 이메일, 주소[구분자 /]) >').split('/')
   name = name.strip()
@@ -52,6 +56,23 @@ def delContact(lst, name): # 연락처 삭제함수
     if item.isNameExist(name):
       del lst[i]
 
+def saveContact(lst): # 연락처 저장함수
+  with open('./contacts.txt', mode='w', encoding='utf-8') as fp:
+    for item in lst:
+      name, phoneNumber, eMail, addr = item.getInfo()
+      fp.write(f'{name}/{phoneNumber}/{eMail}/{addr}\n')
+
+def loadContact(lst): # 처음 실행시 데이터 읽어오는 함수
+  with open('./contacts.txt', mode='r', encoding='utf-8') as fp :
+    while True:
+      line = fp.readline()
+      if not line: break
+
+      lines = line.replace('\n','').split('/')
+      contact = Contact(name=lines[0], phoneNumber=lines[1], eMail=lines[2], addr=lines[3])
+      lst.append(contact)
+
+
 def displayMenu():
   menu = ('주소록 프로그램\n'
           '1. 연락처 추가\n'
@@ -63,13 +84,14 @@ def displayMenu():
   return sel
 
 def getContacts(lst): # 리스트를 받아서 출력
-  for item in enumerate(lst):
-    print(f'{i+1} ========>')
+  for i, item in enumerate(lst):
+    print(f'{i+1} ==========> ')
     print(item)
 
 def run():
   #연락처를 담을 주소록 리스트 생성
   lstContact = []
+  loadContact(lstContact) # 연락처 로드
 
   clearConsole() # 화면을 클리어
   while True:
@@ -91,6 +113,7 @@ def run():
       delContact(lstContact, name)
       clearConsole()
     elif selMenu == 4: # 프로그램 종료
+      saveContact(lstContact)
       break
 
 if __name__ == '__main__': # 메인엔트리
