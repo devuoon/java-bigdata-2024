@@ -24,6 +24,13 @@ class Contact: # 주소록 클래스
             f'주  소 : {self.__addr}\n')
      return res
   
+  # 연락처 여부 확인
+  def isNameExist(self, name):
+    if self.__name == name: # 찾는 이름 존재
+      return True
+    else:
+      return False
+  
 def setContact(): #사용자 입력으로 주소록 받기함수
   (name, phoneNumber, eMail, addr) = input('주소록 입력(이름, 핸드폰, 이메일, 주소[구분자 /]) >').split('/')
   name = name.strip()
@@ -40,6 +47,11 @@ def clearConsole():
     cmd = 'cls' # window 명령어
   os.system(cmd) # 명령어 실행
 
+def delContact(lst, name): # 연락처 삭제함수
+  for i, item in enumerate(lst):
+    if item.isNameExist(name):
+      del lst[i]
+
 def displayMenu():
   menu = ('주소록 프로그램\n'
           '1. 연락처 추가\n'
@@ -51,7 +63,8 @@ def displayMenu():
   return sel
 
 def getContacts(lst): # 리스트를 받아서 출력
-  for item in lst:
+  for item in enumerate(lst):
+    print(f'{i+1} ========>')
     print(item)
 
 def run():
@@ -71,7 +84,12 @@ def run():
     elif selMenu == 2: # 연락처 출력
       clearConsole()
       getContacts(lstContact)
-      input(); clearConsole() 
+      input(); clearConsole()
+    elif selMenu == 3: # 연락처 삭제
+      clearConsole()
+      name = input('삭제할 이름 입력 : ')
+      delContact(lstContact, name)
+      clearConsole()
     elif selMenu == 4: # 프로그램 종료
       break
 
