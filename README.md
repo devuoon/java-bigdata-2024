@@ -107,3 +107,9 @@
     - Windows Application(PyQt)
 
     ![QtApp](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata02.png)
+
+## 6일차
+
+- 파이썬 학습
+  -PyQt5 학습 이어서
+  - QWidget 자식 클래스 종류 학습
