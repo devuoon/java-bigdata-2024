@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import *
 
 import webbrowser
 from naverSearch import NaverSearch
+import datetime
 
 class qtApp(QWidget):
     def __init__(self) -> None: 
@@ -54,17 +55,24 @@ class qtApp(QWidget):
     def makeTable(self, data):
         result = data['items'] #네이버 검색결과의 키 items의 값들만 활용
         # tblSearchResult 리스트뷰 작업
-        self.tblSearchResult.setColumnCount(2)
+        self.tblSearchResult.setColumnCount(3)
         self.tblSearchResult.setRowCount(len(result)) #10개면 10개
-        self.tblSearchResult.setHorizontalHeaderLabels(['기사제목','뉴스링크'])
+        self.tblSearchResult.setHorizontalHeaderLabels(['기사제목','뉴스링크','게시일자'])
 
         n = 0
         for post in result:
             self.tblSearchResult.setItem(n, 0, QTableWidgetItem(post['title']))
             self.tblSearchResult.setItem(n, 1, QTableWidgetItem(post['link']))
+            tempDates = str(post['pubDate']).split(' ')
+            #year = tempDates[3]
+            #month = time.strptime(tempDates[2], '%b').tm_mon
+            #month = f'{month:02d}'
+            #day = tempDates[1]
+            #date=f'{year}-{month}-{day}'
+            self.tblSearchResult.setItem(n, 2, QTableWidgetItem(tempDates))
             n += 1
 
-        self.tblSearchResult.setColumnWidth(0, 465)
+        self.tblSearchResult.setColumnWidth(0, 400)
         self.tblSearchResult.setColumnWidth(1, 200)
         self.tblSearchResult.setEditTriggers(QAbstractItemView.NoEditTriggers) # 컬럼 더블클릭 금지
 
