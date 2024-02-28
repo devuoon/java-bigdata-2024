@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
-    <height>301</height>
+    <width>600</width>
+    <height>250</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
     <width>600</width>
-    <height>600</height>
+    <height>250</height>
    </size>
   </property>
   <property name="font">
@@ -29,36 +29,25 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>561</width>
-     <height>281</height>
+     <width>581</width>
+     <height>231</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="label">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>600</width>
-        <height>600</height>
-       </size>
-      </property>
       <property name="font">
        <font>
         <family>Bauhaus 93</family>
         <pointsize>40</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color : 'red';
-background-color: 'black';</string>
+       <string notr="true">color : red;
+background-color : black;</string>
       </property>
       <property name="text">
-       <string>What a wonderful...</string>
+       <string>What a terrible World!</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -66,9 +55,9 @@ background-color: 'black';</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btnMsg">
       <property name="text">
-       <string>btnMsg</string>
+       <string>클릭</string>
       </property>
      </widget>
     </item>
