@@ -140,7 +140,8 @@
     ![QR](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata06.png)
 
     - 구글번역기앱
-      ![구글번역](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata07.png)
+
+    ![구글번역](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata07.png)
 
 ## 8일차
 
