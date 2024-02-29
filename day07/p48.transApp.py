@@ -1,6 +1,9 @@
 # file : p48_transApp.py
 # desc : PyQt5 구글번역 앱
-# pip install googletrans
+
+# 모듈, 라이브러리 설치시 업,다운 버전을 기재
+# pip install googletrans==3.1.0a0
+# pip install googletrans==4.0.0rc1
 
 import sys
 from PyQt5 import QtGui, QtCore, QtWidgets, uic
