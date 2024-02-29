@@ -120,3 +120,12 @@
   - Naver 뉴스API 검색 앱
 
   ![naverApp](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata04.png)
+
+## 7일차
+
+- 파이썬 학습
+  - PyQt5 계속
+    - Naver 뉴스 API 검색 앱 마무리
+  - json 학습
+  - PyQt5
+    - 스레드 개념, 학습

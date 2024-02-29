@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import *
 import webbrowser
 from naverSearch import NaverSearch
 import datetime
+import time
 
 class qtApp(QWidget):
     def __init__(self) -> None: 
@@ -61,15 +62,18 @@ class qtApp(QWidget):
 
         n = 0
         for post in result:
+            #html태그, 특수문자 삭제를 해야함()
+            title = str(post['title']).replace('<b>','').replace('</b>','')
+
             self.tblSearchResult.setItem(n, 0, QTableWidgetItem(post['title']))
             self.tblSearchResult.setItem(n, 1, QTableWidgetItem(post['link']))
             tempDates = str(post['pubDate']).split(' ')
-            #year = tempDates[3]
-            #month = time.strptime(tempDates[2], '%b').tm_mon
-            #month = f'{month:02d}'
-            #day = tempDates[1]
-            #date=f'{year}-{month}-{day}'
-            self.tblSearchResult.setItem(n, 2, QTableWidgetItem(tempDates))
+            year = tempDates[3]
+            month = time.strptime(tempDates[2], '%b').tm_mon
+            month = f'{month:02d}'
+            day = tempDates[1]
+            date=f'{year}-{month}-{day}'
+            self.tblSearchResult.setItem(n, 2, QTableWidgetItem(date))
             n += 1
 
         self.tblSearchResult.setColumnWidth(0, 400)
