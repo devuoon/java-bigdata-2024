@@ -20,7 +20,7 @@ class BackgroundWorker(QThread):    # PyQt용 스레드
         self.parent = parent    # 나의 부모가 누구인지 알려줌
         
     def run(self) -> None:
-        maxVal = 100
+        maxVal = 1000000
         self.initUiSignal.emit(maxVal)   # 스스로 값을 보내지 못하기 때문에 UI쪽(qtApp)에서 받아서 처리
 
         for i in range(maxVal):
