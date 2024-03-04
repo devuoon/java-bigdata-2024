@@ -158,3 +158,11 @@
     - Tesseract 프로그램으로 이미지에서 글자 추출(인식율을 높이려면 직접 트레이닝을 해서 데이터를 생성해야함)
 
     ![OCR](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata09.png)
+
+## 9일차
+
+- 파이썬 응용
+  - 이미지 처리 OpenCV
+  - 플라스크 웹서버
+  - 그림에디터 만들기
+  - 메모장 만들기
