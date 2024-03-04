@@ -26,7 +26,7 @@ for region in regions:
   startX, startY = 33, 278
   endX, endY = 696,919
 
+  # auto.screentshot() 만 사용하면 acos에서 동작안함
   auto.screenshot(f'./day08/{region}날씨.png', region=(startX, startY, endX-startX, endY-startY))
-
-
+  
 print('저장완료')
