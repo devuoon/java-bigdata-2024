@@ -155,4 +155,6 @@
     <!-- ![슬랙](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata08.jpg) -->
     <img src="https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata08.jpg" width="250">
 
-    - Tesseract 프로그램으로 이미지에서 글자 추출
+    - Tesseract 프로그램으로 이미지에서 글자 추출(인식율을 높이려면 직접 트레이닝을 해서 데이터를 생성해야함)
+
+    ![OCR](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata09.png)
