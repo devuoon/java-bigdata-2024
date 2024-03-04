@@ -154,3 +154,5 @@
 
     <!-- ![슬랙](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata08.jpg) -->
     <img src="https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata08.jpg" width="250">
+
+    - Tesseract 프로그램으로 이미지에서 글자 추출
