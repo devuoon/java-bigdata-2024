@@ -73,7 +73,7 @@
     <property name="title">
      <string>도움말(&amp;H)</string>
     </property>
-    <addaction name="action_A"/>
+    <addaction name="action_About"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_T"/>
@@ -98,7 +98,7 @@
    <addaction name="action_PenGreen"/>
    <addaction name="action_PenBlue"/>
    <addaction name="separator"/>
-   <addaction name="action_A"/>
+   <addaction name="action_About"/>
   </widget>
   <action name="action_New">
    <property name="icon">
@@ -163,7 +163,7 @@
     <string>Blue(B)</string>
    </property>
   </action>
-  <action name="action_A">
+  <action name="action_About">
    <property name="icon">
     <iconset resource="resources.qrc">
      <normaloff>:/icon/imgs/about.png</normaloff>:/icon/imgs/about.png</iconset>
