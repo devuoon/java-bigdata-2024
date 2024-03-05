@@ -48,7 +48,7 @@ class WinApp(QMainWindow):   # QWidget이 아님!
         self.action_Grayscale.triggered.connect(self.actionGrayscaleClicked)
 
     def actiongrayScaleClicked(self):
-        QMessageBox.about(self,'알림',)
+        QMessageBox.about(self,'알림')
         
         
     def actionNewClicked(self):
