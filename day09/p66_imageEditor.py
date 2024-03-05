@@ -13,6 +13,8 @@ from PyQt5.QtGui import QCloseEvent, QMouseEvent
 from PyQt5.QtWidgets import *
 # 리소스 파일 추가
 import resources_rc
+# OpenCV 추가
+import cv2
 
 class WinApp(QMainWindow):   # QWidget이 아님!
     def __init__(self) -> None:
@@ -42,6 +44,11 @@ class WinApp(QMainWindow):   # QWidget이 아님!
         self.action_PenGreen.triggered.connect(self.actionPenGreenClicked)
         self.action_PenBlue.triggered.connect(self.actionPenBlueClicked)
         self.action_About.triggered.connect(self.actionAboutClicked)
+        # 변환 메뉴 추가
+        self.action_Grayscale.triggered.connect(self.actionGrayscaleClicked)
+
+    def actiongrayScaleClicked(self):
+        QMessageBox.about(self,'알림',)
         
         
     def actionNewClicked(self):
