@@ -134,14 +134,16 @@
 
     ![스레드](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata05.png)
 
-    - TTS
-    - QRCode 생성기
+- 파이썬 응용
 
-    ![QR](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata06.png)
+  - TTS
+  - QRCode 생성기
 
-    - 구글번역기앱
+  ![QR](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata06.png)
 
-    ![구글번역](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata07.png)
+  - 구글번역기앱
+
+  ![구글번역](https://raw.githubusercontent.com/devuoon/java-bigdata-2024/main/images/bigdata07.png)
 
 ## 8일차
 
