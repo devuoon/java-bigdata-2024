@@ -3,7 +3,7 @@
 
 import cv2
 
-samplePath = './day09/testVideo.mp4'
+samplePath = './day09/earth.mp4'
 cap = cv2.VideoCapture(samplePath) # 0은 웹캠 또는 문자열로 동영상 경로
 
 while True:
@@ -13,11 +13,17 @@ while True:
     cap = cv2.VideoCapture(samplePath)
     continue
 
-  cv2.imshow('original', frame)
+  ## 영상 편집
+  blur = cv2.blur(frame, (10, 10))
 
-  key = cv2.waitKey(25) # q
-  if key == 27: 
+  cv2.imshow('original', frame)
+  cv2.imshow('blur', blur)
+
+  key = cv2.waitKey(5) # q
+  if key == ord('q'): 
     break
+  elif key == ord('c'):
+    cv2.imwrite('./day09/capt.jpg', frame)
 
 cap.release()
 cv2.destroyAllWindows
