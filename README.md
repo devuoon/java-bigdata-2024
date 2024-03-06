@@ -178,15 +178,11 @@
 ## 10일차
 
 - 파이썬 응용
-<<<<<<< Updated upstream
+
   - 그림에디터 완성(OpenCV 그레이스케일, 블러기능 추가)
 
   https://github.com/devuoon/java-bigdata-2024/assets/104570636/3fdf3794-5424-4e29-86fc-49f68e60fa22
 
-=======
-  - 그림에디터 완성(OpenCV 그레이스케일-, 블러기능 추가)
-    - mp4로 동영상 업로드 하려면 github 사이트에서 Readme.md 수정 (단, 10MB 이하)
->>>>>>> Stashed changes
   - 실행파일 만들기
   - Jupyter Notebook 사용법
     - Ctrl + Shift + P (명령 팔레트)
