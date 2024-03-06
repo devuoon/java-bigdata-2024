@@ -186,4 +186,5 @@
   - 실행파일 만들기
   - Jupyter Notebook 사용법
     - Ctrl + Shift + P (명령 팔레트)
-  - 메모장 만들기
+    - 노트북 사용
+    - ChatGPI API 사용
