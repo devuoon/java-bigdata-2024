@@ -179,6 +179,9 @@
 
 - 파이썬 응용
   - 그림에디터 완성(OpenCV 그레이스케일, 블러기능 추가)
+
+  https://github.com/devuoon/java-bigdata-2024/assets/104570636/3fdf3794-5424-4e29-86fc-49f68e60fa22
+
   - 실행파일 만들기
   - 메모장 만들기
     -Jupyter Notebook 사용법
