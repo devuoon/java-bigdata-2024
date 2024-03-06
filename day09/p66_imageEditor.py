@@ -23,15 +23,17 @@ class WinApp(QMainWindow):   # QWidget이 아님!
         self.initSignal()
         
     def initUI(self):
-        uic.loadUi('./day09/pyNewPaint.ui', self)
-        self.setWindowIcon(QIcon('./day09/imgs/editor.png'))
-        self.setWindowTitle('이미지 에디터 v0.5')
-        ## 이미지 추가
-        pixmap = QPixmap('./day09/johnnaCute.jpg').scaledToHeight(471)
+        # uic.loadUi('./day09/pyNewPaint.ui', self)   # VSCode 실행용
+        uic.loadUi('C:/Source/java-bigdata-2024/day09/pyNewPaint.ui', self)   # PyInstaller용
+        # self.setWindowIcon(QIcon('./day09/imgs/editor.png'))
+        self.setWindowIcon(QIcon('C:/Source/java-bigdata-2024/day09/imgs/johnnaCute.png'))
+        self.setWindowTitle('이미지에디터  v0.5')
+        ## 이미지 추가 / 여러가지 UI에 대한 초기화
+        # pixmap = QPixmap('./day09/ding.jpg').scaledToHeight(471)
+        pixmap = QPixmap('C:/Source/java-bigdata-2024/day09/johnnaCute.jpg').scaledToHeight(471)
         self.lblCanvas.setPixmap(pixmap)
-        self.brushColor = Qt.red
+        self.brushColor = Qt.red    # 빨간색이 기본
         ## UI 초기화 끝
-        
         self.show()
         
     def initSignal(self):
@@ -45,7 +47,7 @@ class WinApp(QMainWindow):   # QWidget이 아님!
         self.action_PenBlue.triggered.connect(self.actionPenBlueClicked)
         self.action_About.triggered.connect(self.actionAboutClicked)
         # 변환 메뉴 추가
-        self.action_Grayscale.triggered.connect(self.actionGrayscaleClicked)
+        #self.action_Grayscale.triggered.connect(self.actionGrayscaleClicked)
 
     def actiongrayScaleClicked(self):
         QMessageBox.about(self,'알림')
